@@ -241,8 +241,15 @@ function changeCategory() {
 }
 
 function displayWord() {
-  var word = words[index].word;
-  var translation = words[index].translation;
+  var word = null;
+  var translation = null;
+
+  do {
+    // Get a random word from the remaining words
+    index = Math.floor(Math.random() * words.length);
+    word = words[index].word;
+    translation = words[index].translation;
+  } while (word === lastWord && shownWords.length < originalWords.length);
 
   var summary = document.getElementById("summary");
   var details = document.getElementById("details");
@@ -259,7 +266,7 @@ function displayWord() {
   }
   lastWord = word;
 
-  shownWords.push(words[index].word);
+  shownWords.push(word);
 
   percentageShown = (shownWords.length / originalWords.length) * 100;
   var percentage = document.getElementById("percentage");
@@ -278,42 +285,33 @@ function switchWord() {
   displayWord();
 }
 
+var shuffleButtonClickCount = 0;
+
 function shuffleWord() {
-  if (shownWords.length === originalWords.length) {
+  shuffleButtonClickCount++;
+
+  if (shuffleButtonClickCount === originalWords.length) {
+    // If shuffle button clicked x+1 times (where x is the number of words in the category), show congrats screen
+    document.getElementById("congratsScreen").style.display = "block";
     return;
   }
 
-  words.splice(index, 1);
-
-  for (var i = words.length - 1; i > 0; i--) {
+  // Shuffle the words in the originalWords array
+  for (var i = originalWords.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
-    var temp = words[i];
-    words[i] = words[j];
-    words[j] = temp;
+    var temp = originalWords[i];
+    originalWords[i] = originalWords[j];
+    originalWords[j] = temp;
   }
 
+  // Reset the words array to include the shuffled words
+  words = originalWords.slice();
+
+  // Reset the index to show the first word in the shuffled list
   index = 0;
 
-  // Add the current word to shownWords
-  shownWords.push(words[index].word);
-
-  // Update the percentage shown
-  percentageShown = (shownWords.length / originalWords.length) * 100;
-  if (shownWords.length === originalWords.length) {
-    percentageShown = 100;
-  }
-
-  var percentage = document.getElementById("percentage");
-  percentage.innerText =
-    "Percentage of words shown from the selected category: " +
-    percentageShown.toFixed(2) +
-    "%";
-
-  // Check if 100% is reached
-  if (percentageShown === 100) {
-    // Show the "Well Done" screen
-    document.getElementById("congratsScreen").style.display = "block";
-  }
+  // Display the first word in the shuffled list
+  displayWord();
 }
 
 window.onload = changeCategory;
