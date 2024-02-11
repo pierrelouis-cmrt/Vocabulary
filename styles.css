@@ -1,15 +1,24 @@
 body {
   background: #e0e0e0;
   font-family: Arial, sans-serif;
+  margin: 50px 50px 50px 50px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
   color: #333;
+  text-align: center;
+  font-size: 3em;
+}
+
+p {
+  font-size: 2em;
 }
 
 button {
   border: none;
-  padding: 10px 20px;
+  padding: 15px 30px;
   margin: 10px 2px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
@@ -17,44 +26,50 @@ button {
   cursor: pointer;
   backdrop-filter: blur(10px);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  font-size: 1.5em;
+}
+
+button:hover {
+  background: #cb5382;
+  color: white;
 }
 
 details {
   border-radius: 15px;
-  padding: 20px;
+  padding: 30px;
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 details summary {
   cursor: pointer;
   color: #333;
+  font-size: 2.5em;
 }
 
 details p {
-  color: #333;
+  color: #cb5382;
   margin-top: 25px;
   margin-bottom: 0;
-}
-
-button:hover,
-select:hover {
-  background: #cb5382; /* Vibrant blue */
-  color: white;
+  font-size: 2em;
 }
 
 select {
-  padding: 10px;
+  padding: 15px;
   border: none;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
   color: #333;
-  font-size: 16px;
+  font-size: 1.5em;
   cursor: pointer;
   backdrop-filter: blur(10px);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
 }
 
@@ -71,4 +86,33 @@ select:focus {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  button,
+  select {
+    padding: 20px 40px;
+    font-size: 1.8em;
+  }
+
+  details {
+    padding: 40px;
+  }
+
+  details summary {
+    font-size: 2.5em;
+  }
+
+  details p {
+    font-size: 1.8em;
+  }
 }

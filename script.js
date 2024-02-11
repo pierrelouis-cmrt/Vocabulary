@@ -222,6 +222,7 @@ var shownWords = [];
 function changeCategory() {
   category = document.getElementById("category").value;
   index = 0;
+  shuffleButtonClickCount = 0; // Reset the shuffle button click count
   if (category == "all") {
     words = [].concat(
       categories.travel,
@@ -285,6 +286,7 @@ function switchWord() {
   displayWord();
 }
 
+var shuffleButton = document.getElementById("shuffleButton");
 var shuffleButtonClickCount = 0;
 
 function shuffleWord() {

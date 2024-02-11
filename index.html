@@ -7,14 +7,14 @@
   <body>
     <div id="congratsScreen">
       <h1 style="color: white; text-align: center; padding-top: 20%">
-        Well Done!
+        Well Done! Category completed 😎
       </h1>
       <button
         id="resetButton"
         style="display: block; margin: 0 auto"
         onclick="location.reload();"
       >
-        Go Back from 0
+        Go Back to 0
       </button>
     </div>
 
@@ -34,7 +34,7 @@
       translation or shuffle.
     </p>
     <button onclick="switchWord()">Switch Word</button>
-    <button onclick="shuffleWord()">Shuffle Word</button>
+    <button id="shuffleButton" onclick="shuffleWord()">Shuffle Word</button>
     <p id="status"></p>
     <hr />
     <p id="percentage"></p>
