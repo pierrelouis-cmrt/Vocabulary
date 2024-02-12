@@ -208,6 +208,16 @@ var categories = {
       word: "a (warning) light comes on",
       translation: "un voyant (d'alerte) s'allume",
     },
+    { word: "tune into", translation: "brancher sur" },
+    { word: "pick up", translation: "ramasser" },
+    { word: "seize up", translation: "griper/bloquer" },
+    { word: "go off", translation: "sauter" },
+    { word: "pop-up adverts", translation: "pop ups/ pubs" },
+    {
+      word: "come up",
+      translation: "monter, se lever, come up with = trouver une idée",
+    },
+    { word: "run out of (ink)", translation: "manquer de" },
   ],
 };
 
@@ -239,37 +249,39 @@ function changeCategory() {
   shownWords = [];
 
   displayWord();
+
+  // Update total number of words in the selected category
+  var totalWords = document.getElementById("total");
+  totalWords.innerText = "Total words in category: " + words.length;
 }
 
 function displayWord() {
   var word = null;
   var translation = null;
 
+  if (words.length === 0) {
+    document.getElementById("summary").innerText = "All words have been shown!";
+    document.getElementById("details").innerText = "";
+    return;
+  }
+
   do {
-    // Get a random word from the remaining words
     index = Math.floor(Math.random() * words.length);
     word = words[index].word;
     translation = words[index].translation;
-  } while (word === lastWord && shownWords.length < originalWords.length);
+  } while (word === lastWord);
 
-  var summary = document.getElementById("summary");
-  var details = document.getElementById("details");
+  currentWord = word;
+  currentTranslation = translation;
 
-  var status = document.getElementById("status");
-  if (mode == "word") {
-    summary.innerText = word;
-    details.innerText = translation;
-    status.innerText = "Visible right now: English";
-  } else {
-    summary.innerText = translation;
-    details.innerText = word;
-    status.innerText = "Visible right now: French";
-  }
-  lastWord = word;
+  // Display the current word and translation without shuffling
+  displayCurrentWord();
 
-  shownWords.push(word);
+  // Remove the shown word from the words array
+  words.splice(index, 1);
 
-  percentageShown = (shownWords.length / originalWords.length) * 100;
+  percentageShown =
+    ((originalWords.length - words.length) / originalWords.length) * 100;
   var percentage = document.getElementById("percentage");
   percentage.innerText =
     "Percentage of words shown from the selected category: " +
@@ -277,13 +289,34 @@ function displayWord() {
     "%";
 }
 
+var currentWord = null;
+var currentTranslation = null;
+
 function switchWord() {
   if (mode == "word") {
     mode = "translation";
   } else {
     mode = "word";
   }
-  displayWord();
+
+  // Display the current word and translation without shuffling
+  displayCurrentWord();
+}
+
+function displayCurrentWord() {
+  var summary = document.getElementById("summary");
+  var details = document.getElementById("details");
+  var status = document.getElementById("status");
+
+  if (mode == "word") {
+    summary.innerText = currentWord;
+    details.innerText = currentTranslation;
+    status.innerText = "Showing up right now: Word (English)";
+  } else {
+    summary.innerText = currentTranslation;
+    details.innerText = currentWord;
+    status.innerText = "Showing up right now: Translation (French)";
+  }
 }
 
 var shuffleButton = document.getElementById("shuffleButton");
@@ -298,16 +331,13 @@ function shuffleWord() {
     return;
   }
 
-  // Shuffle the words in the originalWords array
-  for (var i = originalWords.length - 1; i > 0; i--) {
+  // Shuffle the words in the words array
+  for (var i = words.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
-    var temp = originalWords[i];
-    originalWords[i] = originalWords[j];
-    originalWords[j] = temp;
+    var temp = words[i];
+    words[i] = words[j];
+    words[j] = temp;
   }
-
-  // Reset the words array to include the shuffled words
-  words = originalWords.slice();
 
   // Reset the index to show the first word in the shuffled list
   index = 0;

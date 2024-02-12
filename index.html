@@ -28,13 +28,14 @@
       <option value="student">Collocations: Student Life</option>
       <option value="technology">Phrasal Verbs: Technology</option>
     </select>
+    <p id="total"></p>
 
     <p>
       <i>Tip</i> ⇨ Click on the buttons to switch between the word and its
       translation or shuffle.
     </p>
-    <button onclick="switchWord()">Switch Word</button>
-    <button id="shuffleButton" onclick="shuffleWord()">Shuffle Word</button>
+    <button onclick="switchWord()">Switch: Word⇔Translation</button>
+
     <p id="status"></p>
     <hr />
     <p id="percentage"></p>
@@ -42,5 +43,8 @@
       <summary id="summary">Word</summary>
       <p id="details">Translation</p>
     </details>
+    <button id="shuffleButton" onclick="shuffleWord()">
+      Next word (random) &rarr;
+    </button>
   </body>
 </html>

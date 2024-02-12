@@ -1,9 +1,29 @@
 body {
-  background: #e0e0e0;
+  background: #dfcfbe;
   font-family: Arial, sans-serif;
   margin: 50px 50px 50px 50px;
   padding: 0;
   box-sizing: border-box;
+}
+
+hr {
+  margin-top: 50px;
+  overflow: visible;
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
 }
 
 h1 {
@@ -77,6 +97,12 @@ select:focus {
   outline: none;
 }
 
+#shuffleButton {
+  position: relative;
+  left: 57vw;
+  margin-top: 50px;
+}
+
 #congratsScreen {
   z-index: 100;
   display: none;
@@ -86,6 +112,12 @@ select:focus {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#status,
+#total {
+  font-size: large;
+  margin-left: 10px;
 }
 
 /* Responsive design */
