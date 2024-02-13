@@ -4,7 +4,7 @@ var categories = {
       word: "a thirst for adventure",
       translation: "une soif d'aventure",
     },
-    { word: "get itchy", translation: "avoir la bougeotte" },
+    { word: "get itchy feet", translation: "avoir la bougeotte" },
     {
       word: "contain my excitement",
       translation: "contenir mon excitation",
@@ -68,6 +68,10 @@ var categories = {
       word: "do extreme sports",
       translation: "faire des sports extrêmes",
     },
+    {
+      word: "whitewater",
+      translation: "eau vive (torrents)",
+    },
     { word: "acquire a taste for", translation: "prendre goût à" },
     { word: "keep my balance", translation: "garder mon équilibre" },
     {
@@ -96,7 +100,7 @@ var categories = {
     },
     { word: "played brillantly", translation: "jouer brillamment" },
     { word: "convincing victory", translation: "victoire convaincante" },
-    { word: "the socre stands at", translation: "le score est de" },
+    { word: "the score stands at", translation: "le score est de" },
     { word: "latest scores", translation: "derniers résultats" },
     { word: "take the field", translation: "entrer sur le terrain" },
     {
@@ -124,6 +128,7 @@ var categories = {
     { word: "go wild", translation: "se déchaîner" },
   ],
   student: [
+    { word: "curl up", translation: "se pelotonner, se blottir" },
     { word: "mental agilty", translation: "agilité mentale" },
     { word: "gifted children", translation: "enfants doués" },
     { word: "win a scholarship", translation: "obtenir une bourse" },
@@ -178,7 +183,7 @@ var categories = {
     { word: "thirst for knowledge", translation: "soif de connaissance" },
     { word: "a quick learner", translation: "un apprenant rapide" },
     {
-      word: "my concentrations wavers (non steady)",
+      word: "my concentration wavers (non steady)",
       translation: "ma concentration fluctue",
     },
     {
@@ -197,7 +202,7 @@ var categories = {
     { word: "fade out", translation: "s'estomper" },
     { word: "set up", translation: "installer" },
     { word: "print off", translation: "imprimer" },
-    { word: "wiped off", translation: "effacer" },
+    { word: "wipe off", translation: "effacer" },
     { word: "call up", translation: "appeler" },
     { word: "drop-down", translation: "déroulant" },
     { word: "type in", translation: "taper" },
@@ -211,7 +216,7 @@ var categories = {
     { word: "tune into", translation: "brancher sur" },
     { word: "pick up", translation: "ramasser" },
     { word: "seize up", translation: "griper/bloquer" },
-    { word: "go off", translation: "sauter" },
+    { word: "go off", translation: "s'éteindre (pour un appareil)" },
     { word: "pop-up adverts", translation: "pop ups/ pubs" },
     {
       word: "come up",
