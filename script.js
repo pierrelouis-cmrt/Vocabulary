@@ -95,7 +95,7 @@ var categories = {
     },
     { word: "keep in shape", translation: "rester en forme" },
     {
-      word: "reached fever pitch",
+      word: "reach fever pitch",
       translation: "atteindre son paroxysme",
     },
     { word: "played brillantly", translation: "jouer brillamment" },
