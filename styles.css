@@ -170,6 +170,9 @@ select {
   backdrop-filter: blur(10px);
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 select:focus {
@@ -202,8 +205,9 @@ select:focus {
 /* Responsive design */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 15px;
+    font-size: smaller;
     overflow-x: hidden !important;
+    padding: 50px;
   }
 
   .content {
@@ -218,6 +222,10 @@ select:focus {
     font-size: 3.5em;
   }
 
+  p {
+    font-size: 1.5rem;
+  }
+
   button,
   select {
     padding: 20px 40px;
@@ -226,6 +234,7 @@ select:focus {
 
   details {
     padding: 40px;
+    font-size: 10px;
   }
 
   #category {
