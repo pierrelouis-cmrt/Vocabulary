@@ -16,12 +16,18 @@
 }
 
 body {
+  height: auto;
+  width: 100vw;
   background: var(--background);
   font-family: "Madimi One", sans-serif;
   margin: 50px 50px 50px 50px;
   padding: 50px;
   margin: 0;
   box-sizing: border-box;
+}
+
+.content {
+  position: relative;
 }
 
 hr {
@@ -196,7 +202,16 @@ select:focus {
 /* Responsive design */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 22px;
+    font-size: 15px;
+    overflow-x: hidden !important;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically; use row for horizontal */
+    justify-content: center; /* Align items vertically in the center; works with the current flex-direction */
+    align-items: center; /* Align items horizontally in the center; works with the current flex-direction */
+    height: 150vh; /* Adjust the height as needed */
   }
 
   h1 {
@@ -213,11 +228,16 @@ select:focus {
     padding: 40px;
   }
 
-  details summary {
-    font-size: 2.5em;
+  #category {
+    width: 80vw;
   }
 
-  details p {
-    font-size: 1.8em;
+  #shuffleButton {
+    left: auto;
+  }
+
+  #total,
+  #status {
+    font-size: 150%;
   }
 }
