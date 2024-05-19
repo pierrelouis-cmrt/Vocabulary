@@ -46,7 +46,7 @@ var categories = {
     { word: "das Heimatmuseum", translation: "le musée local" },
     { word: "ein missbrauchter Begriff", translation: "un terme abusé" },
     { word: "die Globalisierung", translation: "la mondialisation" },
-    { word: "fie Instrumentalisierung", translation: "l'instrumentalisation" },
+    { word: "die Instrumentalisierung", translation: "l'instrumentalisation" },
     { word: "die Abgrenzung", translation: "la délimitation" },
     { word: "eine andere Kultur", translation: "une autre culture" },
   ],
