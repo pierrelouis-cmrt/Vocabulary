@@ -1,66 +1,173 @@
 var categories = {
-  HeimatUnLieu: [
-    { word: "die Heimat", translation: "la patrie" },
-    { word: "der Heimatbegriff", translation: "le concept de patrie" },
-    { word: "der Geburtsort", translation: "le lieu de naissance" },
-    { word: "der Wohnort", translation: "le lieu de résidence" },
+  SummerReview: [
+    { word: "une victoire écrasante", translation: "an overwhelming victory" },
+    { word: "demandeur d’asile", translation: "asylum seeker" },
+    { word: "être blessé", translation: "to be injured" },
+    { word: "incendie volontaire", translation: "arson" },
+    { word: "la foule", translation: "the crowd" },
     {
-      word: "lange irgendwo wohnen",
-      translation: "habiter longtemps quelque part",
+      word: "le film le plus rentable",
+      translation: "the most profitable film",
     },
-    { word: "das Bundesland", translation: "l'état fédéré" },
-    { word: "die Gegend / die Region", translation: "la région" },
-    { word: "die Stadt / das Dorf", translation: "la ville / le village" },
-    { word: "die Landschaft", translation: "le paysage" },
-    { word: "der Wald", translation: "la forêt" },
-    { word: "der Berg", translation: "la montagne" },
-    { word: "der See", translation: "le lac" },
+    { word: "un visage ensanglanté", translation: "a bloodied face" },
+    { word: "la brasse", translation: "the breaststroke" },
+    { word: "mérité", translation: "deserved" },
+    { word: "coincés dans l’espace", translation: "stuck in space" },
+    { word: "s’excuser", translation: "to apologize" },
+    { word: "une antenne parabolique", translation: "a satellite dish" },
+    { word: "une perturbation", translation: "a disturbance" },
+    { word: "une échelle", translation: "a ladder" },
+    { word: "avoir lieu", translation: "to take place" },
+    { word: "une ville balnéaire", translation: "a seaside town" },
+    { word: "des émeutes", translation: "riots" },
+    { word: "menacés", translation: "threatened" },
   ],
-
-  HeimatUnSentiment: [
-    { word: "das Heimweh", translation: "le mal du pays" },
-    { word: "die Gemütlichkeit", translation: "la convivialité" },
-    { word: "die Verbundenheit", translation: "le sentiment d'appartenance" },
-    { word: "die Zusammengehörigkeit", translation: "la solidarité" },
-    { word: "die gemeinsamen Werte", translation: "les valeurs communes" },
-    { word: "die Sehnsucht", translation: "la nostalgie, le désir ardent" },
-    { word: "das Zuhause", translation: "le chez-soi" },
+  SummerReview2A: [
+    { word: "Somptueux", translation: "sumptuous" },
+    { word: "Viser", translation: "to aim" },
+    { word: "Ex- / ancien(-ne)", translation: "former" },
+    { word: "Coûteux", translation: "costly" },
+    { word: "Décennie", translation: "decade" },
+    { word: "Colère", translation: "anger" },
+    { word: "Feux de forêt", translation: "wildfires" },
+    { word: "Émeutier (une émeute)", translation: "rioter (a riot)" },
+    { word: "Réchauffement climatique", translation: "global warming" },
     {
-      word: "sich zu Hause fühlen / sich fremd fühlen",
-      translation: "se sentir chez soi / se sentir étranger",
+      word: "Une sortie (film, disque…)",
+      translation: "a release (film, record…)",
     },
-    { word: "nach etwas riechen", translation: "sentir quelque chose" },
-    {
-      word: "sich an etwas erinnern",
-      translation: "se souvenir de quelque chose",
-    },
-    { word: "der Waldspaziergang", translation: "la promenade en forêt" },
+    { word: "Augmentation", translation: "increase" },
+    { word: "Éloge, louange", translation: "praise" },
+    { word: "Sauveteur (secourir)", translation: "rescuer (to rescue)" },
+    { word: "Étendu, répandu", translation: "widespread" },
+    { word: "Épave", translation: "wreck" },
+    { word: "Rester", translation: "to stay" },
+    { word: "Selon, d’après", translation: "according to" },
+    { word: "Vague de chaleur", translation: "heatwave" },
   ],
-
-  UneNouvelleNostalgie: [
+  EventsSummer2024: [
     {
-      word: "Die Sehnsucht nach Heimat",
-      translation: "La nostalgie de la patrie",
+      word: "July 5th: Keir Starmer becomes Prime Minister",
+      translation:
+        "Keir Starmer succeeded Rishi Sunak following the 2024 general election in Britain. He emphasized the challenge of fixing a wounded country.",
     },
-    { word: "der Trachtenverein", translation: "l'association folklorique" },
-    { word: "das Heimatmuseum", translation: "le musée local" },
-    { word: "ein missbrauchter Begriff", translation: "un terme abusé" },
-    { word: "die Globalisierung", translation: "la mondialisation" },
-    { word: "die Instrumentalisierung", translation: "l'instrumentalisation" },
-    { word: "die Abgrenzung", translation: "la délimitation" },
-    { word: "eine andere Kultur", translation: "une autre culture" },
+    {
+      word: "July 13th: Donald Trump Assassination Attempt",
+      translation:
+        "Donald Trump was injured during an attempted assassination at a rally in Pennsylvania, resulting in his injury and the death of the gunman.",
+    },
+    {
+      word: "July 15th: Spain Wins Euro 2024",
+      translation:
+        "Spain defeated England 2-1 in the European Football Championship, claiming its fourth title and breaking records for goals scored.",
+    },
+    {
+      word: "July 19th: Global IT Outage",
+      translation:
+        "A faulty software update by CrowdStrike caused a global IT outage, affecting businesses, banks, and hospitals, and led to widespread disruption.",
+    },
+    {
+      word: "July 22nd: Biden Declines Reelection",
+      translation:
+        "President Joe Biden announced he will not seek reelection and endorsed Kamala Harris, shaking up the political landscape.",
+    },
+    {
+      word: "July 24th: Paris 2024 Summer Olympics",
+      translation:
+        "The 2024 Summer Olympics, held in Paris and other cities across France, kicked off on July 24.",
+    },
+    {
+      word: "July 30th: Far-Right Riots in England",
+      translation:
+        "Far-right riots broke out in England following a mass stabbing, which was falsely blamed on a Muslim asylum seeker.",
+    },
+    {
+      word: "July 31st: Inside Out 2 Becomes Highest-Grossing Animated Film",
+      translation:
+        "Inside Out 2 earned $1.46 billion, surpassing Frozen II to become the highest-grossing animated film of all time.",
+    },
+    {
+      word: "August 2nd: Léon Marchand Wins Fourth Olympic Gold",
+      translation:
+        "French swimmer Léon Marchand won his fourth gold medal at the 2024 Summer Olympics, cementing his place in swimming history.",
+    },
+    {
+      word: "August 7th: Astronauts Stranded in Space",
+      translation:
+        "Two astronauts may be stranded aboard the ISS until 2025 due to safety concerns.",
+    },
+    {
+      word: "August 9th: Banksy Artwork Stolen",
+      translation:
+        "A new Banksy artwork depicting a wolf on a satellite dish in London was stolen shortly after it was unveiled.",
+    },
+    {
+      word: "August 13th: Greek Wildfires",
+      translation:
+        "Wildfires continued to ravage Greece, prompting evacuation alerts and assistance from European nations.",
+    },
   ],
-
-  PasseportEtIdentité: [
+  EventsSummer20242A: [
     {
-      word: "in einem Land geboren / gewachsen sein",
-      translation: "être né / avoir grandi dans un pays",
+      word: "May 6th: Coronation of King Charles III",
+      translation:
+        "King Charles III and Queen Consort Camilla were crowned in a lavish coronation ceremony, the first in over 70 years following Queen Elizabeth II's death in 2022.",
     },
-    { word: "der Ausländer -in", translation: "l'étranger, l'étrangère" },
-    { word: "die Einwanderung", translation: "l'immigration" },
-    { word: "die ursprüngliche Kultur", translation: "la culture d'origine" },
-    { word: "der Pass", translation: "le passeport" },
-    { word: "das Blut", translation: "le sang" },
+    {
+      word: "June 3rd: Indian Train Crash",
+      translation:
+        "A train crash in eastern India killed more than 270 people, marking the country's worst disaster in two decades.",
+    },
+    {
+      word: "June: Canadian Wildfire Smoke Over New York",
+      translation:
+        "Smoke from Canadian wildfires covered parts of the eastern U.S., turning the sky orange over New York City, with climate change cited as a major factor.",
+    },
+    {
+      word: "June 9th: Children Found After 40 Days in the Jungle",
+      translation:
+        "Four children were found alive after surviving a plane crash and spending 40 days in the Colombian rainforest.",
+    },
+    {
+      word: "June 22nd: Titanic Submarine Catastrophe",
+      translation:
+        "The search for five people aboard a submarine viewing the Titanic wreckage ended in tragedy, as pieces of the vessel were found after a 'catastrophic implosion'.",
+    },
+    {
+      word: "June 23rd: Russian Military Mutiny",
+      translation:
+        "Yevgeny Prigozhin, a Russian military leader, mounted an armed insurrection against the Kremlin's military leadership.",
+    },
+    {
+      word: "July 2nd: Riots in France",
+      translation:
+        "Violent protests erupted in France after the police killing of 17-year-old Nahel M., leading to riots and attacks on local politicians.",
+    },
+    {
+      word: "July 21st: Barbie and Oppenheimer Released",
+      translation:
+        "Barbie was released, sparking the 'Barbenheimer' phenomenon, and became the highest-grossing film directed by a woman.",
+    },
+    {
+      word: "August 8th: Maui Wildfires",
+      translation:
+        "Wildfires on the island of Maui, Hawaii, caused widespread destruction and claimed the lives of at least 114 people, with around 1,300 still missing in the aftermath.",
+    },
+    {
+      word: "August 14th: Donald Trump Indicted in Georgia",
+      translation:
+        "Former President Donald Trump faced significant legal charges in Georgia, where he was accused of attempting to reverse the results of the 2020 election.",
+    },
+    {
+      word: "August 20th: Spain Wins Women's World Cup",
+      translation:
+        "Spain won their first-ever Women's World Cup title, defeating England 1-0 in the final with a goal from Olga Carmona.",
+    },
+    {
+      word: "Summer 2023: Record Heatwaves",
+      translation:
+        "The summer of 2023 saw the warmest temperatures on record, with extreme heatwaves sweeping across Europe, China, and North America.",
+    },
   ],
 };
 
@@ -78,10 +185,10 @@ function changeCategory() {
   shuffleButtonClickCount = 0; // Reset the shuffle button click count
   if (category == "all") {
     words = [].concat(
-      categories.HeimatUnLieu,
-      categories.HeimatUnSentiment,
-      categories.UneNouvelleNostalgie,
-      categories.PasseportEtIdentité
+      categories.SummerReview,
+      categories.SummerReview2A,
+      categories.EventsSummer2024,
+      categories.EventsSummer20242A
     );
   } else {
     words = categories[category];
